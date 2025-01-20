@@ -1,0 +1,221 @@
+@font-face {
+    font-family: nb;
+    src: url(./NBInternationalProBoo.ttf);
+}
+
+@font-face {
+    font-family: rejoy;
+    src: url(./Rejouice-Headline.ttf);
+}
+
+@font-face {
+    font-family: blake;
+    src: url(./Blakefont.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.main-image img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
+    filter: grayscale(30);
+    opacity: 40%;
+}
+
+.navbar {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(36, 35, 35);
+    border-radius: 50%;
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: dropDown 1s ease-out forwards, expandNav 0.5s 1s forwards;
+    transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    opacity: 0;
+    animation: fadeIn 0.5s 1.2s forwards;
+}
+
+.nav-list li {
+    margin: 0 8px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 4px 12px;
+    font-family: nb;
+    transition: background-color 0.3s ease, color 0.1s ease, border-radius 0.1s ease;
+}
+
+.nav-list li a:hover{
+    background-color: #E8E8E8;
+    border-radius: 5px;
+    color: black;
+}
+
+@keyframes dropDown {
+    0% {
+        top: -100px;
+    }
+    60% {
+        top: 50px;
+    }
+    80% {
+        top: 20px;
+    }
+    100% {
+        top: 10px;
+    }
+}
+
+@keyframes expandNav {
+    from {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    to {
+        width: 25%;
+        height: 40px;
+        border-radius: 20px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Extra small to medium devices  */
+@media (max-width: 425px) {
+    @keyframes expandNav {
+        from {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        to {
+            width: 95%;
+            height: 40px;
+            border-radius: 20px;
+        }
+    }
+
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    @keyframes expandNav {
+        from {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        to {
+            width: 75%;
+            height: 40px;
+            border-radius: 20px;
+        }
+    }
+}
+
+/* media query for tablet */
+@media (min-width: 768px) and (max-width: 1300px) {
+    @keyframes expandNav {
+        from {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        to {
+            width: 50%;
+            height: 40px;
+            border-radius: 20px;
+        }
+    }
+}
+
+
+/* name section */
+
+.main-name h1{
+    position:absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 8em ;
+    /* transition: all 0.5s ease-in; */
+    animation-name: fontOpacity;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.5;
+    width: 100%;
+    text-align: center;
+}
+
+.main-name h1:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(89, 87, 87);
+}
+.main-name h1:nth-child(2){
+    color: rgba(255, 255, 255, 0.819);
+    animation: animate 3s ease-in-out infinite;
+}
+@keyframes animate {
+    0%,100%{
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
+
+@keyframes fontOpacity{
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

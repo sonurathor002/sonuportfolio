@@ -32,13 +32,13 @@ body{
     position: relative;
     z-index: 0;
     filter: grayscale(30);
-    opacity: 40%;
+    opacity: 70%;
 }
 
 .navbar {
     width: 50px;
     height: 50px;
-    background-color: rgb(36, 35, 35);
+    background-color: rgb(203, 201, 201);
     border-radius: 50%;
     position: fixed;
     top: -100px;
@@ -64,7 +64,7 @@ body{
 }
 
 .nav-list li a {
-    color: white;
+    color: rgb(8, 7, 7);
     text-decoration: none;
     font-size: 18px;
     padding: 4px 12px;
@@ -73,9 +73,9 @@ body{
 }
 
 .nav-list li a:hover{
-    background-color: #E8E8E8;
+    background-color: #0e0d0d;
     border-radius: 5px;
-    color: black;
+    color: white;
 }
 
 @keyframes dropDown {
@@ -130,6 +130,7 @@ body{
             border-radius: 20px;
         }
     }
+    
 } 
 
 @media (min-width: 426px) and (max-width: 768px) {
@@ -173,7 +174,7 @@ body{
     transform: translate(-50%, -50%);
     font-weight: bold;
     font-family: sans-serif;
-    font-size: 6em ;
+    font-size: 6.5em ;
     animation: fontOpacity 0.5s ease-in 0.5s;
     width: 100%;
     text-align: center;
@@ -181,7 +182,7 @@ body{
 
 .main-name h1:nth-child(1){
     color: transparent;
-    -webkit-text-stroke: 2px rgb(89, 87, 87);
+    -webkit-text-stroke: 2px rgba(172, 169, 169, 0.877);
 }
 .main-name h1:nth-child(2){
     color: rgba(255, 255, 255, 0.819);
@@ -204,10 +205,77 @@ body{
 }
 
 
+/* PROJECT SECTION */
+#project h1{
+    color: white;
+    text-align: center;
+    font-size: 5em;
+    font-family: rejoy;
+    /* border: 1px solid red; */
+    padding-bottom: 80px;
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .box{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2));
 
+}
 
+.container .box:hover{
+    color: #000;
+}
 
+.container .box:before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #fff;
+    background: #000;
+    filter: url(#wavy);    
+}
 
+.container .box:hover:before{
+    background: #ffffff84;
+    transition: 0.5s;
+}
+.container .box .content{
+    position: absolute;
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.container .box:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 50%;
+    height: 100%;
+    border: 4px solid #fff;
+    background: rgba(255,255,255,.1); 
+    filter: url(#wavy);
+    border-right: none;   
+}
+
+svg{
+    width: 100%;
+    height: 100%;
+}
 
 
 

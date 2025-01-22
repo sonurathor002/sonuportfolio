@@ -240,7 +240,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2)); */
+    -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2));
     /* border: 1px solid red; */
 
 }
@@ -279,7 +279,7 @@ body{
     left: -10px;
     width: 50%;
     height: 100%;
-    border: 3px solid #fff;
+    /* border: 3px solid #fff; */
     background: rgba(255,255,255,.1); 
     filter: url(#wavy);
     border-right: none;   

@@ -130,6 +130,18 @@ body{
             border-radius: 20px;
         }
     }
+    .container .box{
+        position: relative;
+        width: 500px;
+        height: 300px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2));
+        /* border: 1px solid red; */
+    
+    }
     
 } 
 

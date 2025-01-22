@@ -178,7 +178,9 @@ body{
     animation: fontOpacity 0.5s ease-in 0.5s;
     width: 100%;
     text-align: center;
+    /* border: 1px solid red; */
 }
+
 
 .main-name h1:nth-child(1){
     color: transparent;
@@ -206,29 +208,40 @@ body{
 
 
 /* PROJECT SECTION */
-#project h1{
-    color: white;
+#project h1 {
     text-align: center;
-    font-size: 5em;
-    font-family: rejoy;
+    font-size: 5.5em;
+    font-family: rejoy, sans-serif;
+    /* background-image: url(slide04.jpg); */
+    /* background-size: cover; */
+    /* background-position: center;  */
+    /* -webkit-background-clip: text;  */
+    /* -webkit-text-fill-color: transparent;  */
+    color: wheat;
+    position: relative;
     /* border: 1px solid red; */
-    padding-bottom: 80px;
+    
 }
+
 .container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
+    width: 50%;
+    transform: translate(50%,10%);
 }
 .container .box{
     position: relative;
-    width: 600px;
-    height: 400px;
+    width: 800px;
+    height: 500px;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2));
+    /* -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2)); */
+    /* border: 1px solid red; */
 
 }
 
@@ -243,7 +256,7 @@ body{
     left: -10px;
     width: 100%;
     height: 100%;
-    border: 4px solid #fff;
+    border: 3px solid #fff;
     background: #000;
     filter: url(#wavy);    
 }
@@ -266,7 +279,7 @@ body{
     left: -10px;
     width: 50%;
     height: 100%;
-    border: 4px solid #fff;
+    border: 3px solid #fff;
     background: rgba(255,255,255,.1); 
     filter: url(#wavy);
     border-right: none;   

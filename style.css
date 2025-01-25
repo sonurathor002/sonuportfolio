@@ -275,7 +275,7 @@ main{
 .project-card {
     position: relative; 
     width: 75%;
-    margin: 80px 80px;
+    margin: 80px 50px;
 }
 
 .project-card img{
@@ -310,6 +310,7 @@ main{
     height: 50%;
     width: 70%;
     position: absolute;
+    /* overflow: hidden; */
     top: 20%;
     left: 20%;
     opacity: 0; /* Initially hidden */
@@ -323,13 +324,13 @@ main{
 }
 
 .project1-skill{
-    font-size: 60px;
+    font-size: 50px;
     display: flex;
 }
 
 #project1-text{
     color: white;
-    font-size: 30px;
+    font-size: 90%;
     font-family: nb;
 }
 #project1-text p{
@@ -338,6 +339,84 @@ main{
     font-weight: 100;
     font-style: italic;
     
+}
+
+/* ---- Media Queries ---- */
+
+/* Small screens (up to 425px) */
+@media screen and (max-width: 425px) {
+    .project1-container {
+        height: 60%; /* Increase height for better readability */
+        width: 90%; /* Reduce width to fit small screens */
+        top: 15%;
+        left: 5%; /* Center it horizontally */
+    }
+    .project1-skill {
+        font-size: 30px; /* Reduce font size */
+    }
+    #project1-text {
+        font-size: 80%; /* Reduce text size */
+    }
+    #project1-text p {
+        font-size: 16px; /* Adjust paragraph font size */
+    }
+}
+
+/* Medium screens (426px to 768px) */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .project1-container {
+        height: 55%;
+        width: 80%; /* Slightly wider for medium screens */
+        top: 20%;
+        left: 10%;
+    }
+    .project1-skill {
+        font-size: 40px; /* Adjust font size for medium screens */
+    }
+    #project1-text {
+        font-size: 85%; /* Slightly larger text size */
+    }
+    #project1-text p {
+        font-size: 18px;
+    }
+}
+
+/* Large screens (769px to 1300px) */
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+    .project1-container {
+        height: 50%; /* Standard height */
+        width: 70%; /* Standard width */
+        top: 20%;
+        left: 15%; /* Adjust horizontal alignment */
+    }
+    .project1-skill {
+        font-size: 45px; /* Balanced font size for large screens */
+    }
+    #project1-text {
+        font-size: 90%; /* Normal text size */
+    }
+    #project1-text p {
+        font-size: 20px;
+    }
+}
+
+/* Extra large screens (1301px and above) */
+@media screen and (min-width: 1301px) {
+    .project1-container {
+        height: 50%; /* Keep default height */
+        width: 70%; /* Default width */
+        top: 20%;
+        left: 20%; /* Centered alignment */
+    }
+    .project1-skill {
+        font-size: 50px; /* Keep default font size */
+    }
+    #project1-text {
+        font-size: 90%; /* Keep default text size */
+    }
+    #project1-text p {
+        font-size: 20px;
+    }
 }
 
 

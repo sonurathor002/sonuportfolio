@@ -263,107 +263,82 @@ section{
     text-align: center;
 }
 
-/* PROJECT SECTION */
+                            /* PROJECT SECTION */
 main{
     text-align: center;
     font-size: 80px;
     font-family: rejoy, sans-serif;
     color: #D8D2C2;
     font-weight: bold;
-    text-shadow: 
-        0 0 10px rgba(255, 255, 255, 0.4),
-        0 0 20px rgba(255, 204, 102, 0.6),
-        0 0 20px rgba(255, 204, 102, 0.5);
-    /* background-color: #151515; */
-}
-
-.project-container {
-    display: flex;
-    /* justify-content: center; */
-    
 }
 
 .project-card {
-    position: relative; /* To position the overlay over the image */
+    position: relative; 
     width: 75%;
-    margin: 80px 50px;
-    
+    margin: 80px 80px;
 }
 
-.project-card img {
-    height: 40vw;
+.project-card img{
+    height: 70%;
     width: 100%;
-    /* border: 1px solid red; */
-    /* opacity: 0%; */
-    box-shadow: 0px 0px 40px #f9f8f8;
-    transition: opacity 0.3s ease-in-out; /* Smooth transition on hover */
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px #f9f8f8;
+    transition: opacity 0.3s ease-in-out;
     position: relative;
-    
+    opacity: 60%;
 }
 
-.project-card .overlay {
+
+.project-card #project1{
     position: absolute;
     top: 0;
     left: 0;
     width: 0; /* Start with no width */
     height: 100%;
-    opacity: 60%;
-    background-color: #616479; /* Blue layer with some transparency */
-    transition: width 0.5s ease; /* Smooth sliding animation */
+    opacity: 80%;
+    border-radius: 10px;
+    background-color: #000407; /* Blue layer with some transparency */
+    transition: width 0.4s ease; /* Smooth sliding animation */
 }
 
-.project-card:hover img {
-    opacity: 0.5; /* Decrease image opacity on hover */
+.project-card:hover #project1 {
+    width: 100%;
 }
 
-.project-card:hover .overlay {
-    width: 100%; /* Expand the overlay to cover the image */
-}
-
-.project-card .text {
+.project1-container{
+    /* border: 2px solid red; */
+    height: 50%;
+    width: 70%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2em;
-    z-index: 2; /* Ensure text is above the overlay */
-    transition: opacity 0.3s ease;
-    opacity: 1; /* Start with full opacity */
+    top: 20%;
+    left: 20%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s ease; /* Smooth fade-in and fade-out */
+    pointer-events: none; /* Prevent interaction when invisible */
 }
 
-/* .project-card:hover .text {
-    opacity: 0; Fade out the text on hover
-} */
-
-.overlay {
-    position: relative; /* To position the h1 within the overlay */
-}
-
-.overlay h1 {
-    /* border: 1px solid red; */
-    color: white;
-    font-family: sans-serif;
-    font-size: 200px;
-    position: absolute;
-    right: 0;
-    top: 0; /* Adjusted for vertical centering */
-    transform: translateY(-40%); /* Vertically centers the text */
-    opacity: 0; /* Initially invisible */
-    visibility: hidden; /* Prevents it from occupying space when invisible */
-    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth transition */
-    text-shadow: 
-        0 0 10px rgb(255, 255, 255),
-        0 0 20px rgba(255, 204, 102, 0.6),
-        0 0 20px rgba(255, 204, 102, 0.5);
-}
-
-.project-card:hover .overlay h1 {
+.project-card:hover .project1-container {
     opacity: 1; /* Make it visible on hover */
-    visibility: visible; /* Makes it interactable and visible */
-    transition: opacity 0.3s ease, visibility 0s 0s; /* Ensures visibility is set immediately */
+    pointer-events: auto; /* Enable interaction when visible */
 }
 
+.project1-skill{
+    font-size: 60px;
+    display: flex;
+}
+
+#project1-text{
+    color: white;
+    font-size: 30px;
+    font-family: nb;
+}
+#project1-text p{
+    /* border: 1px solid red; */
+    font-size: 20px;
+    font-weight: 100;
+    font-style: italic;
+    
+}
 
 
 

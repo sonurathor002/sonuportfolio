@@ -298,7 +298,7 @@ main{
     box-shadow: 0px 0px 30px #f9f8f8;
     transition: opacity 0.3s ease-in-out;
     position: relative;
-    opacity: 60%;
+    opacity: 70%;
 }
 
 
@@ -318,11 +318,11 @@ main{
     width: 100%;
 }
 
-.overlay {
+.overlay1 {
     position: relative; /* To position the h1 within the overlay */
 }
 
-.overlay h1 {
+.overlay1 h1 {
     /* border: 1px solid red; */
     z-index: 1;
     color: white;
@@ -341,7 +341,7 @@ main{
         0 0 20px rgba(255, 204, 102, 0.5);
 }
 
-.project-card1:hover .overlay h1 {
+.project-card1:hover .overlay1 h1 {
     opacity: 1; /* Make it visible on hover */
     visibility: visible; /* Makes it interactable and visible */
     transition: opacity 0.3s ease, visibility 0s 0s; /* Ensures visibility is set immediately */
@@ -460,9 +460,7 @@ main{
 .project-card2 {
     position: relative; 
     width: 75%;
-    /* margin: 80px 150px; */
     margin: 8vw 16vw;
-    /* border: 1px solid red; */
 }
 
 .project-card2 img{
@@ -472,9 +470,8 @@ main{
     box-shadow: 0px 0px 30px #f9f8f8;
     transition: opacity 0.3s ease-in-out;
     position: relative;
-    opacity: 60%;
+    opacity: 70%;
 }
-
 
 .project-card2 #project2{
     position: absolute;
@@ -492,18 +489,18 @@ main{
     width: 100%;
 }
 
-.overlay {
+.overlay2 {
     position: relative; /* To position the h1 within the overlay */
 }
 
-.overlay h1 {
+.overlay2 h1 {
     /* border: 1px solid red; */
     z-index: 1;
     color: white;
     font-family: sans-serif;
     font-size: 15vw;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0; /* Adjusted for vertical centering */
     transform: translateY(-40%); /* Vertically centers the text */
     opacity: 0; /* Initially invisible */
@@ -515,7 +512,7 @@ main{
         0 0 20px rgba(255, 204, 102, 0.5);
 }
 
-.project-card2:hover .overlay h1 {
+.project-card2:hover .overlay2 h1 {
     opacity: 1; /* Make it visible on hover */
     visibility: visible; /* Makes it interactable and visible */
     transition: opacity 0.3s ease, visibility 0s 0s; /* Ensures visibility is set immediately */

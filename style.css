@@ -275,19 +275,40 @@ section{
     text-align: center;
 }
 
-                            /* PROJECT  1 SECTION */
+/*                                               PROJECT  1 SECTION                                 */
+
 main{
     text-align: center;
-    font-size: 80px;
+    font-size: 6vw;
     font-family: rejoy, sans-serif;
     color: #D8D2C2;
     font-weight: bold;
+    /* border: 1px solid red; */
+    position: relative;
+    padding-top: 15px;
 }
+
+main::after {
+    content: "";
+    position: absolute;
+    bottom: -0px; 
+    left: 50%; /* Start from the center */
+    width: 0; /* Initial width is 0 */
+    height: 2px; /* Thickness of the underline */
+    background-color: #D8D2C2; /* Color of the underline */
+    transform: translateX(-50%); /* Center the underline */
+    transition: all 0.9s ease; /* Smooth transition */
+}
+
+main:hover::after {
+    width: 19vw; /* Expands the underline across the element */
+}
+
 
 .project-card1 {
     position: relative; 
-    width: 75%;
-    margin: 8vw 9vw;
+    width: 70%;
+    margin: 3vw 9vw;
     /* left: 15%; */
 }
 
@@ -454,12 +475,12 @@ main{
 
 
 
-                                            /* PROJECT  2 SECTION */
-                                            
+/*                                  PROJECT  2 SECTION              */
+
 .project-card2 {
     position: relative; 
-    width: 75%;
-    margin: 8vw 16vw;
+    width: 70%;
+    margin: 10vw 20vw;
 }
 
 .project-card2 img{
@@ -620,6 +641,175 @@ main{
 }
 
 #project2-text .button:hover a {
+    color: black; /* Change text color on hover */
+}
+
+/*                                  PROJECT 3 SECTION                                    */
+
+.project-card3 {
+    position: relative; 
+    width: 70%;
+    margin: 10vw 9vw;
+}
+
+.project-card3 img{
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px #f9f8f8;
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+    opacity: 70%;
+}
+
+.project-card3 #project3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Start with no width */
+    height: 100%;
+    opacity: 80%;
+    border-radius: 10px;
+    background-color: #000407; /* Blue layer with some transparency */
+    transition: width 0.4s ease; /* Smooth sliding animation */
+}
+
+.project-card3:hover #project3 {
+    width: 100%;
+}
+
+.overlay3 {
+    position: relative; /* To position the h1 within the overlay */
+}
+
+.overlay3 h1 {
+    /* border: 1px solid red; */
+    z-index: 1;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15vw;
+    position: absolute;
+    right: 0;
+    top: 0; /* Adjusted for vertical centering */
+    transform: translateY(-40%); /* Vertically centers the text */
+    opacity: 0; /* Initially invisible */
+    visibility: hidden; /* Prevents it from occupying space when invisible */
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth transition */
+    text-shadow: 
+        0 0 10px rgb(255, 255, 255),
+        0 0 20px rgba(255, 204, 102, 0.6),
+        0 0 20px rgba(255, 204, 102, 0.5);
+}
+
+.project-card3:hover .overlay3 h1 {
+    opacity: 1; /* Make it visible on hover */
+    visibility: visible; /* Makes it interactable and visible */
+    transition: opacity 0.3s ease, visibility 0s 0s; /* Ensures visibility is set immediately */
+}
+
+.project3-container{
+    /* border: 2px solid red; */
+    height: 50%;
+    width: 70%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s ease; /* Smooth fade-in and fade-out */
+    pointer-events: none; /* Prevent interaction when invisible */
+}
+
+.project-card3:hover .project3-container {
+    opacity: 1; /* Make it visible on hover */
+    pointer-events: auto; /* Enable interaction when visible */
+}
+
+.project3-skill {
+    font-size: 7vw;
+    display: flex;
+    transition: all 0.3s ease-in-out; 
+}
+
+#project3-text {
+    color: white;
+    font-size: 2vw;
+    font-family: nb;
+    opacity: 0; /* Initially invisible */
+    visibility: hidden; /* Prevents it from occupying space when invisible */
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s, font-size 0.3s ease-in-out; /* Smooth transition */
+    /* border: 1px solid red; */
+}
+
+.project-card3:hover #project3-text {
+    opacity: 1; /* Fully visible on hover */
+    visibility: visible; /* Makes it visible */
+    font-size: 2.5vw; /* Optional: Increase font size on hover */
+    transition: opacity 0.3s ease-in-out, visibility 0s 0s, font-size 0.3s ease-in-out;
+}
+
+
+#project3-text p {
+    /* border: 1px solid red; */
+    font-size: 1vw;
+    font-weight: 100;
+    font-style: italic;
+    transition: font-size 0.3s ease-in-out, font-weight 0.3s ease-in-out; /* Smooth transition added */
+}
+
+#project3-text .button {
+    display: inline-block; /* Behave like a button */
+    width: 12vw;
+    height: 5vw;
+    background-color: #e74949; /* Initial solid color */
+    border: none;
+    border-radius: 5px;
+    /* font-size: 2vw; */
+    color: white;
+    text-align: center;
+    line-height: 5vw; /* Vertically align the text */
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Ensures the hover effect stays within the button bounds */
+    transition: all 0.3s ease-in-out; /* Smooth text transition */
+}
+
+#project3-text .button:hover {
+    box-shadow: 5px 5px 10px gray; /* Add shadow on hover */
+    transform: scale(1.1); /* Scale the button on hover */
+    background: white; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}
+
+#project3-text .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start off-screen to the left */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #110303 0%, rgba(231, 73, 73, 0) 100%);
+    transition: all 0.5s ease-in-out;
+    z-index: 0; /* Place it behind the text */
+}
+
+#project3-text .button:hover::before {
+    left: 100%; /* Move the gradient off-screen to the right */
+}
+
+#project3-text .button:hover {
+    background: white; /* Ensure background color is cleared */
+}
+
+#project3-text .button a {
+    position: relative;
+    z-index: 1; /* Place the text above the gradient effect */
+    color: white; /* Text color for the default state */
+    transition: color 0.3s ease-in-out; /* Smooth text color transition */
+}
+
+#project3-text .button:hover a {
     color: black; /* Change text color on hover */
 }
 

@@ -16,13 +16,14 @@
 *{
     margin: 0;
     padding: 0;
+    /* border: 1px solid red; */
 
 }
 
 body{
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: #0c0c0cf4;
 }
 
 .main-image img{
@@ -32,18 +33,77 @@ body{
     position: relative;
     z-index: 0;
     filter: grayscale(30);
-    opacity: 70%;
+    opacity: 50%;
     /* border: 1px solid white; */
 }
-.main-image::after {
-    content: '';
+.water{
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    background-color: #0c0c0c0a;
+    overflow: hidden;
+    opacity: 80%;
+    position: absolute;
+    bottom: -5px;
+}
+.water .wave {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2vw;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, black 100%);
-    z-index: 1; /* Ensure it's above the image */
+    height: 100px;
+    background: 
+        linear-gradient(to bottom, #0c0c0ce0, #0c0c0cf4),
+        url(wave.png);
+    background-size: 1000px 100px;
+    background-blend-mode: multiply; /* Blend the gradient with the image */
+}
+
+
+/* .water .wave.wave1{
+    animation: animate3 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+} */
+/* .water .wave.wave2{
+    animation: animate4 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+} */
+.water .wave.wave3{
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+.water .wave.wave4{
+    animation: animate4 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes animate3{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate4{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
 }
 
 .navbar {
@@ -179,7 +239,7 @@ body{
 }
 
 
-                                /*   This part is of name section and media query */
+/*                                  This part is of name section and media query */
 
 .main-name h1{
     position:absolute;
@@ -196,13 +256,13 @@ body{
 
 .main-name h1:nth-child(1){
     color: transparent;
-    -webkit-text-stroke: 2px rgba(150, 148, 148, 0.877);
+    -webkit-text-stroke: 2px rgb(150, 148, 148);
 }
 .main-name h1:nth-child(2){
     color: rgba(255, 255, 255, 0.819);
-    animation: animate 3s ease-in-out infinite;
+    animation: animate1 3s ease-in-out infinite;
 }
-@keyframes animate {
+@keyframes animate1 {
     0%,100%{
         clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%,
         70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
@@ -274,7 +334,7 @@ main p {
     text-align:center;
     font-size: 60px;
     font-family: rejoy, sans-serif;
-    color: #D8D2C2;
+    color: #c7b585;
     font-weight: bold;
     position: relative;
     padding-top: 15px;
@@ -791,6 +851,427 @@ main p {
 #project3-text .button:hover a {
     color: black; /* Change text color on hover */
 }
+
+
+/*                                              PROJECT  4           */
+
+.project-card4 {
+    position: relative; 
+    width: 70%;
+    margin: 2vw 20vw;
+}
+
+.project-card4 img{
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px #f9f8f8;
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+    opacity: 70%;
+}
+
+.project-card4 #project4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Start with no width */
+    height: 100%;
+    opacity: 80%;
+    border-radius: 10px;
+    background-color: #000407; /* Blue layer with some transparency */
+    transition: width 0.4s ease; /* Smooth sliding animation */
+}
+
+.project-card4:hover #project4 {
+    width: 100%;
+}
+
+.overlay4 {
+    position: relative; /* To position the h1 within the overlay */
+}
+
+.overlay4 h1 {
+    /* border: 1px solid red; */
+    z-index: 1;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15vw;
+    position: absolute;
+    left: 0;
+    top: 0; /* Adjusted for vertical centering */
+    transform: translateY(-40%); /* Vertically centers the text */
+    opacity: 0; /* Initially invisible */
+    visibility: hidden; /* Prevents it from occupying space when invisible */
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth transition */
+    text-shadow: 
+        0 0 10px rgb(255, 255, 255),
+        0 0 20px rgba(255, 204, 102, 0.6),
+        0 0 20px rgba(255, 204, 102, 0.5);
+}
+
+.project-card4:hover .overlay4 h1 {
+    opacity: 1; /* Make it visible on hover */
+    visibility: visible; /* Makes it interactable and visible */
+    transition: opacity 0.3s ease, visibility 0s 0s; /* Ensures visibility is set immediately */
+}
+
+.project4-container{
+    /* border: 2px solid red; */
+    height: 50%;
+    width: 70%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s ease; /* Smooth fade-in and fade-out */
+    pointer-events: none; /* Prevent interaction when invisible */
+}
+
+.project-card4:hover .project4-container {
+    opacity: 1; /* Make it visible on hover */
+    pointer-events: auto; /* Enable interaction when visible */
+}
+
+.project4-skill {
+    font-size: 7vw;
+    display: flex;
+    transition: all 0.3s ease-in-out; 
+}
+
+#project4-text {
+    color: white;
+    font-size: 2vw;
+    font-family: nb;
+    opacity: 0; /* Initially invisible */
+    visibility: hidden; /* Prevents it from occupying space when invisible */
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s, font-size 0.3s ease-in-out; /* Smooth transition */
+    /* border: 1px solid red; */
+}
+
+.project-card4:hover #project4-text {
+    opacity: 1; /* Fully visible on hover */
+    visibility: visible; /* Makes it visible */
+    font-size: 2.5vw; /* Optional: Increase font size on hover */
+    transition: opacity 0.3s ease-in-out, visibility 0s 0s, font-size 0.3s ease-in-out;
+}
+
+
+#project4-text p {
+    /* border: 1px solid red; */
+    font-size: 1vw;
+    font-weight: 100;
+    font-style: italic;
+    transition: font-size 0.3s ease-in-out, font-weight 0.3s ease-in-out; /* Smooth transition added */
+}
+
+#project4-text .button {
+    display: inline-block; /* Behave like a button */
+    width: 12vw;
+    height: 5vw;
+    background-color: #e74949; /* Initial solid color */
+    border: none;
+    border-radius: 5px;
+    /* font-size: 2vw; */
+    color: white;
+    text-align: center;
+    line-height: 5vw; /* Vertically align the text */
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Ensures the hover effect stays within the button bounds */
+    transition: all 0.3s ease-in-out; /* Smooth text transition */
+}
+
+#project4-text .button:hover {
+    box-shadow: 5px 5px 10px gray; /* Add shadow on hover */
+    transform: scale(1.1); /* Scale the button on hover */
+    background: white; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}
+
+#project4-text .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start off-screen to the left */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #110303 0%, rgba(231, 73, 73, 0) 100%);
+    transition: all 0.5s ease-in-out;
+    z-index: 0; /* Place it behind the text */
+}
+
+#project4-text .button:hover::before {
+    left: 100%; /* Move the gradient off-screen to the right */
+}
+
+#project4-text .button:hover {
+    background: white; /* Ensure background color is cleared */
+}
+
+#project4-text .button a {
+    position: relative;
+    z-index: 1; /* Place the text above the gradient effect */
+    color: white; /* Text color for the default state */
+    transition: color 0.3s ease-in-out; /* Smooth text color transition */
+}
+
+#project4-text .button:hover a {
+    color: black; /* Change text color on hover */
+}
+
+
+/*                                      ABOUT SECTION                */
+
+#about h1 {
+    text-align:center;
+    font-size: 60px;
+    font-family: rejoy, sans-serif;
+    color: #c7b585;
+    font-weight: bold;
+    position: relative;
+    padding-top: 15px;
+}
+
+.about-content{
+    /* border: 2px solid white; */
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+}
+
+#about-main{
+    /* border: 1px solid red; */
+    height: fit-content;
+    width: 50%;
+    position: relative;
+}
+#about-main h1{
+    color: white;
+    margin-top: 15%;
+    /* border: 1px solid green; */
+    font-family: "Akaya Kanadaka", serif;
+    font-size: 6vw;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+}
+
+#about-main h1 span{
+    font-size: 9vw;
+    font-weight: 400;
+    font-family: "Akaya Kanadaka", serif;
+    transition: font-size 0.2s ease-in;
+    
+}
+#about-main h1 span:hover {
+    font-size: 9.5vw;
+    
+}
+
+#about-main h2{
+    color: white;
+    text-align: center;
+    /* border: 1px solid yellow; */
+    font-family: "Be Vietnam Pro", serif;
+    font-weight: 200;
+    padding: 1vw;
+    font-size: 3vw;
+}
+
+#about-main p{
+    color: white;
+    font-family: "Be Vietnam Pro", serif;
+    /* border: 1px solid yellow; */
+    padding: 2vw 5vw;
+    text-align: center;
+    /* font-size: 3vw; */
+}
+
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 50%;
+    /* border: 1px solid blue; */
+    padding-top: 20px;
+}
+
+.box{
+    background-image: url(sonuphoto.jpeg);
+    filter: grayscale(1);
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: middle;
+    height: 450px;
+    width: 450px;
+    box-shadow: 0px 0px 30px #f9f8f8;
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes animate{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+/* Media query for max width 425px (already created for reference) */
+@media (max-width: 425px) {
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    #about-main {
+        width: 100%;
+        order: 1;
+        margin-bottom: 20px;
+        border: none;
+    }
+
+    #about-main h1 {
+        font-size: 8vw;
+        margin-top: 1%;
+        order: 1;
+    }
+
+    .wrapper {
+        width: 90%;
+        height: fit-content;
+        margin-bottom: 20px;
+        order: 2;
+    }
+
+    #about-main h2 {
+        font-size: 4vw;
+        margin-top: 10px;
+        order: 3;
+        font-weight: 200;
+    }
+
+    #about-main p {
+        font-size: 4vw;
+        padding: 2vw 10px;
+        order: 4;
+        font-weight: 100;
+    }
+}
+
+/* Media query for max width 430px (similar adjustments but separate) */
+@media (max-width: 430px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    #about-main h1 {
+        font-size: 8.5vw; /* Slightly larger font size for this range */
+    }
+    #about-main h2 {
+        font-size: 4vw;
+        margin-top: 10px;
+        order: 3;
+        font-weight: 200;
+    }
+
+    #about-main p {
+        font-size: 4.2vw; /* Adjust slightly for readability */
+        font-weight: 100;
+    }
+}
+
+/* Media query for 426px to 768px */
+@media (min-width: 426px) and (max-width: 768px) {
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    #about-main {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #about-main h1 {
+        font-size: 6vw; /* Slightly smaller font size to fit screen */
+        margin-top: 1%;
+    }
+
+    .wrapper {
+        width: 90%; /* Center the wrapper but with some margin */
+        margin-bottom: 25px;
+    }
+
+    #about-main h2 {
+        font-size: 3.5vw; /* Slight adjustment for this screen size */
+    }
+
+    #about-main p {
+        font-size: 3.8vw; /* Adjust font size for readability */
+        padding: 2vw 20px;
+        font-weight: 100;
+    }
+}
+
+/* Media query for 769px to 1300px */
+@media (min-width: 769px) and (max-width: 1300px) {
+    .about-content {
+        flex-direction: row; /* Use row for larger screens */
+        justify-content: space-between; /* Spread content horizontally */
+        align-items: flex-start;
+        height: auto;
+    }
+
+    #about-main {
+        width: 50%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    #about-main h1 {
+        font-size: 4vw; /* Adjust for larger screens */
+        margin-top: 10%;
+    }
+
+    .wrapper {
+        width: 50%;
+        margin-right: 50px;
+    }
+
+    #about-main h2 {
+        font-size: 2.5vw;
+        margin-top: 1px;
+    }
+
+    #about-main p {
+        font-size: 2vw;
+        padding: 1vw 5vw;
+        font-weight: 100;
+    }
+}
+
+
+
 
 
 

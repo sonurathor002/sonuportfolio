@@ -28,23 +28,25 @@ body{
 
 .main-image img{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
+    background-position: cover;
     position: relative;
     z-index: 0;
-    filter: grayscale(30);
-    opacity: 50%;
+    filter: grayscale(90%);
+    opacity: 80%;
     /* border: 1px solid white; */
 }
 .water{
-    position: relative;
+    /* position: relative; */
     width: 100%;
-    height: 15vh;
+    height: 15%;
     background-color: #0c0c0c0a;
     overflow: hidden;
     opacity: 80%;
     position: absolute;
-    bottom: -5px;
+    bottom: 0px;
+    /* border: 1px solid red; */
 }
 .water .wave {
     position: absolute;
@@ -205,6 +207,7 @@ body{
             border-radius: 20px;
         }
     }
+
 } 
 
 @media (min-width: 426px) and (max-width: 768px) {

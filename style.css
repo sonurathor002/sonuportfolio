@@ -33,6 +33,7 @@ body{
     z-index: 0;
     filter: grayscale(30);
     opacity: 70%;
+    /* border: 1px solid white; */
 }
 .main-image::after {
     content: '';
@@ -41,7 +42,7 @@ body{
     left: 0;
     width: 100%;
     height: 30%;
-    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, black 100%); */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, black 100%);
     z-index: 1; /* Ensure it's above the image */
 }
 
@@ -270,31 +271,16 @@ section{
 /*                                               PROJECT  1 SECTION                                 */
 
 main p {
-    text-align: center;
+    text-align:center;
     font-size: 60px;
     font-family: rejoy, sans-serif;
     color: #D8D2C2;
     font-weight: bold;
     position: relative;
     padding-top: 15px;
-    align-items: center;
+    /* border: 1px solid red; */
 }
 
-main p::after {
-    content: "";
-    position: absolute;
-    bottom: -5px; /* Adjust the underline position below the text */
-    left: 50%; /* Start from the center */
-    width: 0; /* Initial width is 0 */
-    height: 2px; /* Thickness of the underline */
-    background-color: #D8D2C2; /* Color of the underline */
-    transform: translateX(-50%); /* Center the underline */
-    transition: all 0.9s ease; /* Smooth transition */
-}
-
-main p:hover::after {
-    width: 150px; /* Expands the underline across the element */
-}
 
 
 

@@ -33,7 +33,7 @@ body{
     background-position: cover;
     position: relative;
     z-index: 0;
-    filter: grayscale(90%);
+    filter: grayscale(100%);
     opacity: 80%;
     /* border: 1px solid white; */
 }

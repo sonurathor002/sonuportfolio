@@ -17,6 +17,7 @@
     margin: 0;
     padding: 0;
     /* border: 1px solid red; */
+    box-sizing: border-box;
 
 }
 
@@ -26,17 +27,58 @@ body{
     background-color: #0c0c0cf4;
 }
 
-.main-image img{
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    background-position: cover;
+.image-container {
     position: relative;
-    z-index: 0;
-    filter: grayscale(100%);
-    opacity: 80%;
-    /* border: 1px solid white; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+    filter: grayscale(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Stars Layer */
+#starsCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+/* Moving Planet Effect */
+.planet {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30vh; /* Adjust for size */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    animation: float 6s ease-in-out infinite alternate;
+    z-index: 3;
+}
+
+/* Floating animation for the planet */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
 /* .main-image::after {
     content: "";
     position: absolute;
@@ -1069,7 +1111,7 @@ main p {
     margin-top: 15%;
     /* border: 1px solid green; */
     font-family: "Akaya Kanadaka", serif;
-    font-size: 6vw;
+    font-size: 5vw;
     font-weight: 300;
     font-style: normal;
     text-align: center;

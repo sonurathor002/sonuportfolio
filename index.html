@@ -17,9 +17,11 @@
 
 </head>
 <body>
-    <div class="main-image" id="home">
-      <img src="slide05.jpg" alt="hero_image" loading="lazy">
-    </div>
+  <div class="image-container">
+    <img src="slide05.jpg" alt="Space Image" class="background-image">
+    <canvas id="starsCanvas"></canvas>
+    <div class="planet"></div> <!-- Moving planet layer -->
+  </div>
     <!-- <div class="water">
       <div class="wave wave1"></div>
       <div class="wave wave2"></div>
@@ -130,8 +132,8 @@
       </div>
       <div class="about-content">
         <div id="about-main">
-          <h1>Hi! <span> S<span style="font-size: 5vw;">onu.</span></span></h1>
-          <h2>I am a Web Developer</h2>
+          <h1>Hi! It's<span style="font-size: 10vw;"> Sonu.</span></h1>
+          <h2>I am a Full Stack Developer</h2>
           <p>I'm a software developer and here is my portfolio website. Here you'll learn about my journey as a software developer.</p>
         </div>
         <div class="wrapper">

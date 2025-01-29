@@ -59,16 +59,6 @@ body{
     z-index: 2;
 }
 
-/* Floating animation for the planet */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
-}
-
 
 .navbar {
     width: 50px;
@@ -82,8 +72,9 @@ body{
     animation: dropDown 1s ease-out forwards, expandNav 0.5s 1s forwards;
     transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
     z-index: 1000;
+    /* border: 1px solid red; */
+    margin-top: 5px;
 }
-
 
 .nav-list {
     list-style: none;
@@ -96,10 +87,8 @@ body{
     position: relative;
 }
 
-
-
 .nav-list li {
-    margin: 0 8px;
+    margin: 0 6px;
 }
 
 .nav-list li a {
@@ -139,7 +128,7 @@ body{
         border-radius: 50%;
     }
     to {
-        width: 25%;
+        width: 24%;
         height: 40px;
         border-radius: 20px;
     }
@@ -164,10 +153,19 @@ body{
             border-radius: 50%;
         }
         to {
-            width: 95%;
+            width: 70%;
             height: 40px;
             border-radius: 20px;
         }
+    }
+    .navbar{
+        margin-top: 6px;
+    }
+    .nav-list li {
+        margin: 0 3px;
+    }
+    .nav-list li a{
+        padding: 4px 8px;
     }
 
 } 
@@ -180,10 +178,19 @@ body{
             border-radius: 50%;
         }
         to {
-            width: 75%;
+            width: 65%;
             height: 40px;
             border-radius: 20px;
         }
+    }
+    .navbar{
+        margin-top: 6px;
+    }
+    .nav-list li {
+        margin: 0 1vw;
+    }
+    .nav-list li a{
+        padding: 1vw 1vw;
     }
 }
 
@@ -196,10 +203,19 @@ body{
             border-radius: 50%;
         }
         to {
-            width: 50%;
+            width: 40%;
             height: 40px;
             border-radius: 20px;
         }
+    }
+    .navbar{
+        margin-top: 6px;
+    }
+    .nav-list li {
+        margin: 0 1vw;
+    }
+    .nav-list li a{
+        padding: 4px 1vw;
     }
 }
 

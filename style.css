@@ -320,15 +320,16 @@ body{
 }
 
 
-section{
+section p{
     color: #FBF5E5;
     position:absolute;
-    top: 56%;
+    top: 55%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     /* border: 1px solid red; */
     width: 100%;
     text-align: center;
+    padding-top: 5px;
 }
 
 /*                                               PROJECT  1 SECTION                                 */

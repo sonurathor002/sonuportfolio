@@ -37,6 +37,16 @@ body{
     opacity: 80%;
     /* border: 1px solid white; */
 }
+/* .main-image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Adjust how much of the bottom should be covered */
+    /* background: linear-gradient(to bottom, #161616,#161616 100%); */
+    /* z-index: 1; */
+/* } */
 .water{
     /* position: relative; */
     width: 100%;
@@ -259,7 +269,7 @@ body{
 
 .main-name h1:nth-child(1){
     color: transparent;
-    -webkit-text-stroke: 2px rgb(150, 148, 148);
+    -webkit-text-stroke: 3px rgb(216, 214, 214);
 }
 .main-name h1:nth-child(2){
     color: rgba(255, 255, 255, 0.819);

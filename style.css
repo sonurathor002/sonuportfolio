@@ -1062,10 +1062,10 @@ main p {
 
 #left-bottom h2 span::before {
     content: " "; /* Default text */
-    animation: words 10s infinite;
+    animation: words 5s infinite;
 }
 
-#left-bottom h2 span::after {
+/* #left-bottom h2 span::after {
     content: '';
     position: absolute;
     width: 3px;
@@ -1073,7 +1073,7 @@ main p {
     background-color: white;
     right: -5px;
     animation: cursor 0.6s steps(2) infinite;
-}
+} */
 
 @keyframes cursor {
     50% { background-color: transparent; }
@@ -1254,26 +1254,11 @@ main p {
     }
 }
 
+/*                      Education Section               */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* .education{
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+} */
 

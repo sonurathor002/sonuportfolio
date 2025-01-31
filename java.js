@@ -14,6 +14,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+
 const canvas = document.getElementById("starsCanvas");
 const ctx = canvas.getContext("2d");
 

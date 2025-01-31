@@ -225,13 +225,12 @@ body{
 .main-name h1{
     position:absolute;
     top: 40%;
-    font-weight: bold;
-    font-family: sans-serif;
+    font-family: "Italiana", serif;
+    font-weight: 500;
     font-size: 6.5em ;
     animation: fontOpacity 0.5s ease-in 0.5s;
     width: 100%;
     text-align: center;
-    /* border: 1px solid red; */
 }
 
 
@@ -302,7 +301,8 @@ section p{
     color: #FBF5E5;
     position:absolute;
     top: 55%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: "Italiana", serif;
     font-size: 20px;
     /* border: 1px solid red; */
     width: 100%;
@@ -1033,28 +1033,67 @@ main p {
 #left-top h1{
     color: white;
     margin-top: 18%;
-    font-family: "Akaya Kanadaka", serif;
+    /* font-family: "Akaya Kanadaka", serif; */
     font-size: 5vw;
-    font-weight: 300;
+    font-weight: 700;
     font-style: normal;
     text-align: center;
     padding: 5px;
+    font-family: "Italiana", serif;
+    
 }
 
 #left-bottom h2{
     /* background-color: pink; */
     color: white;
     text-align: center;
-    font-family: "Be Vietnam Pro", serif;
-    font-weight: 200;
+    font-weight: 600;
     font-size: 2vw;
+    font-family: "Italiana", serif;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
 }
+
+
+#left-bottom h2 span {
+    position: relative;
+}
+
+#left-bottom h2 span::before {
+    content: " "; /* Default text */
+    animation: words 10s infinite;
+}
+
+#left-bottom h2 span::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: white;
+    right: -5px;
+    animation: cursor 0.6s steps(2) infinite;
+}
+
+@keyframes cursor {
+    50% { background-color: transparent; }
+}
+
+@keyframes words {
+    0%, 33% { content: "Full-stack Web Developer"; }
+    34%, 66% { content: "Front-end Developer"; }
+    67%, 100% { content: "Back-end Developer"; }
+}
+
+
 #left-bottom p{
     color: white;
-    font-family: "Be Vietnam Pro", serif;
+    /* font-family: "Be Vietnam Pro", serif; */
     padding: 2vw 5vw;
     text-align: center;
+    font-family: "Italiana", serif;
     /* background-color: pink; */
+
 }
 
 #right{
@@ -1185,6 +1224,10 @@ main p {
     #left-bottom h2 {
         font-size: 3.5vw;
         padding: 10px;
+    }
+
+    #left-bottom h2 span::after {
+        width: 2px;
     }
 
     #left-bottom p {

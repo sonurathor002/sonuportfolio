@@ -1015,15 +1015,17 @@ main p {
     font-weight: bold;
     position: relative;
     padding-top: 15px;
+    /* border: 2px solid red; */
 }
 
 .about-content{
-    height: 100%;
+    height: 60vh;
     width: 100%;
     /* background-color: rgba(255, 0, 0, 0.362); */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr ;
+    /* border: 1px solid blue; */
 }
 
 #left-top{
@@ -1032,17 +1034,47 @@ main p {
 }
 #left-top h1{
     color: white;
-    margin-top: 18%;
+    margin-top: 15%;
     /* font-family: "Akaya Kanadaka", serif; */
     font-size: 5vw;
     font-weight: 700;
     font-style: normal;
     text-align: center;
-    padding: 5px;
     font-family: "Italiana", serif;
     
 }
+#left-top h1 span{
+    font-size: 10vw;
+    position: relative;
+    transition: all linear 0.3s;
+}
+#left-top h1 span:hover{
+    color: black;
+    transition: all linear 0.3s;
+}
 
+#left-top h1 span::after{
+    content: "";
+    border-radius: 10px;
+    height: 90%;
+    width: 0;
+    top: 0;
+    left: 5%;
+    background-color: whitesmoke;
+    position: absolute;
+    transition: all linear 0.3s;
+    z-index: 1;
+}
+
+#left-top h1 span:hover::after{
+    width: 100%;
+    z-index: -1;
+}
+
+#left-bottom{
+    padding-top: 60px;
+    /* background-color: red; */
+}
 #left-bottom h2{
     /* background-color: pink; */
     color: white;
@@ -1051,7 +1083,7 @@ main p {
     font-size: 2vw;
     font-family: "Italiana", serif;
     position: relative;
-    overflow: hidden;
+    margin-top:-3vw;
     white-space: nowrap;
 }
 
@@ -1065,15 +1097,15 @@ main p {
     animation: words 5s infinite;
 }
 
-/* #left-bottom h2 span::after {
+#left-bottom h2 span::after {
     content: '';
     position: absolute;
     width: 3px;
     height: 100%;
     background-color: white;
-    right: -5px;
+    right: -7px;
     animation: cursor 0.6s steps(2) infinite;
-} */
+}
 
 @keyframes cursor {
     50% { background-color: transparent; }
@@ -1092,10 +1124,41 @@ main p {
     padding: 2vw 5vw;
     text-align: center;
     font-weight: 100;
-    /* font-family: "Italiana", serif; */
-    /* background-color: pink; */
 
 }
+
+#edu-left{
+    padding: 0px 25px;
+}
+
+.edu-course1{
+    padding: 1vw 1.5vw;
+    background-color: rgb(205, 201, 194);
+    margin-bottom: 10px;
+    width: 80%;
+    border-radius: 40px;
+}
+.edu-course1 h4{
+    font-size: 1.2vw;
+    text-align: left;
+    font-family: "Be Vietnam Pro", serif;
+    font-weight: 500;
+}
+
+.edu-course2{
+    background-color: rgb(205, 201, 194);
+    padding: 1vw 1.5vw;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 40px;
+}
+.edu-course2 h4{
+    font-size: 1.2vw;
+    text-align: left;
+    font-family: "Be Vietnam Pro", serif;
+    font-weight: 500;
+}
+
 
 #right{
     /* background-color: goldenrod; */
@@ -1108,7 +1171,7 @@ main p {
     align-items: center;
     justify-content: center;
     /* border: 1px solid blue; */
-    padding: 120px; 
+    padding: 110px; 
 }
 
 #right .box{
@@ -1172,6 +1235,33 @@ main p {
         font-size: 3vw;
         padding: 2vw 10px;
     }
+    .edu-course1{
+        margin-bottom: 10px;
+        width: fit-content;
+        border-radius: 40px;
+    }
+    .edu-course1 h4{
+        font-size: 1.2vw;
+        text-align: left;
+        font-family: "Be Vietnam Pro", serif;
+        font-weight: 500;
+    }
+    .year{
+        margin-left: 150px
+    }
+    
+    .edu-course2{
+        padding: 1vw 1.5vw;
+        width: fit-content;
+        margin-bottom: 10px;
+        border-radius: 40px;
+    }
+    .edu-course2 h4{
+        font-size: 1.2vw;
+        text-align: left;
+        font-family: "Be Vietnam Pro", serif;
+        font-weight: 500;
+    }
 
     #right {
         grid-column: 1;
@@ -1217,7 +1307,7 @@ main p {
     #left-bottom {
         text-align: center;
         width: 90%;
-        padding: 15px;
+        padding: 20px;
         grid-row: 3/4;
         grid-column: 1/3;
     }
@@ -1234,6 +1324,34 @@ main p {
     #left-bottom p {
         font-size: 2.5vw;
         padding: 2vw 30px;
+    }
+    .edu-course1{
+        margin-bottom: 10px;
+        width: fit-content;
+        border-radius: 40px;
+        padding: 1vw 0.7vw;
+    }
+    .edu-course1 h4{
+        font-size: 1.2vw;
+        text-align: left;
+        font-family: "Be Vietnam Pro", serif;
+        font-weight: 500;
+    }
+    .year{
+        margin-left: 150px;
+    }
+    
+    .edu-course2{
+        width: fit-content;
+        padding: 1vw 0.7vw;
+        margin-bottom: 10px;
+        border-radius: 40px;
+    }
+    .edu-course2 h4{
+        font-size: 1.2vw;
+        text-align: left;
+        font-family: "Be Vietnam Pro", serif;
+        font-weight: 500;
     }
 
     #right {
@@ -1254,11 +1372,38 @@ main p {
     }
 }
 
+@media (min-width: 1025px) and (max-width: 1986px) {
+    .edu-course1{
+        margin-bottom: 10px;
+        width: fit-content;
+        border-radius: 40px;
+        padding: 0.9vw 0.7vw;
+    }
+    .edu-course1 h4{
+        font-size: 1.2vw;
+        text-align: left;
+        font-family: "Be Vietnam Pro", serif;
+        font-weight: 500;
+    }
+    .year{
+        margin-left: 80px;
+    }
+    
+    .edu-course2{
+        width: fit-content;
+        padding: 0.9vw 0.7vw;
+        margin-bottom: 10px;
+        border-radius: 40px;
+    }
+    .edu-course2 h4{
+        font-size: 1.2vw;
+        text-align: left;
+        font-family: "Be Vietnam Pro", serif;
+        font-weight: 500;
+    }
+}
+
 /*                      Education Section               */
 
-/* .education{
-    height: 100vh;
-    width: 100%;
-    background-color: red;
-} */
+
 

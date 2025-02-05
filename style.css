@@ -1924,7 +1924,7 @@ main p {
 }
 
 .footer ul li a i{
-    font-size: 3em;
+    font-size: 2em;
     color: #fff;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -1948,7 +1948,7 @@ main p {
 
 .footer p{
     padding: 20px 0;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #fff;
     font-family: Be Vietnam Pro;
     font-weight: 200;
@@ -1957,7 +1957,7 @@ main p {
 
 .footer p:nth-child(3){
     padding: 0px;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #fff;
     font-family: Be Vietnam Pro;
     font-weight: 200;

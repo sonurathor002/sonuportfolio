@@ -8,11 +8,6 @@
     src: url(./Rejouice-Headline.ttf);
 }
 
-@font-face {
-    font-family: blake;
-    src: url(./Blakefont.ttf);
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -315,9 +310,9 @@ section p{
 main p {
     text-align:center;
     font-size: 60px;
-    font-family: rejoy, sans-serif;
+    font-family: "Be Vietnam Pro", serif;
     color: #c7b585;
-    font-weight: bold;
+    font-weight: 500;
     position: relative;
     padding-top: 15px;
     /* border: 1px solid red; */
@@ -368,8 +363,9 @@ main p {
     /* border: 1px solid red; */
     z-index: 1;
     color: white;
-    font-family: sans-serif;
-    font-size: 15vw;
+    /* font-family: sans-serif; */
+    font-family: "Be Vietnam Pro", serif;
+    font-size: 14vw;
     position: absolute;
     right: 0;
     top: 0; /* Adjusted for vertical centering */
@@ -415,7 +411,7 @@ main p {
 #project1-text {
     color: white;
     font-size: 2vw;
-    font-family: nb;
+    /* font-family: nb; */
     opacity: 0; /* Initially invisible */
     visibility: hidden; /* Prevents it from occupying space when invisible */
     transition: opacity 0.3s ease-in-out, visibility 0s 0.3s, font-size 0.3s ease-in-out; /* Smooth transition */
@@ -449,7 +445,7 @@ main p {
     text-align: center;
     line-height: 5vw; /* Vertically align the text */
     text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     cursor: pointer;
     position: relative;
     overflow: hidden; /* Ensures the hover effect stays within the button bounds */
@@ -538,8 +534,9 @@ main p {
     /* border: 1px solid red; */
     z-index: 1;
     color: white;
-    font-family: sans-serif;
-    font-size: 15vw;
+    /* font-family: sans-serif; */
+    font-family: "Be Vietnam Pro", serif;
+    font-size: 14vw;
     position: absolute;
     left: 0;
     top: 0; /* Adjusted for vertical centering */
@@ -585,7 +582,7 @@ main p {
 #project2-text {
     color: white;
     font-size: 2vw;
-    font-family: nb;
+    /* font-family: nb; */
     opacity: 0; /* Initially invisible */
     visibility: hidden; /* Prevents it from occupying space when invisible */
     transition: opacity 0.3s ease-in-out, visibility 0s 0.3s, font-size 0.3s ease-in-out; /* Smooth transition */
@@ -707,8 +704,9 @@ main p {
     /* border: 1px solid red; */
     z-index: 1;
     color: white;
-    font-family: sans-serif;
-    font-size: 15vw;
+    /* font-family: sans-serif; */
+    font-family: "Be Vietnam Pro", serif;
+    font-size: 14vw;
     position: absolute;
     right: 0;
     top: 0; /* Adjusted for vertical centering */
@@ -877,8 +875,9 @@ main p {
     /* border: 1px solid red; */
     z-index: 1;
     color: white;
-    font-family: sans-serif;
-    font-size: 15vw;
+    /* font-family: sans-serif; */
+    font-family: "Be Vietnam Pro", serif;
+    font-size: 14vw;
     position: absolute;
     left: 0;
     top: 0; /* Adjusted for vertical centering */
@@ -1010,9 +1009,10 @@ main p {
 #about h1 {
     text-align:center;
     font-size: 60px;
-    font-family: rejoy, sans-serif;
+    /* font-family: rejoy, sans-serif; */
+    font-family: "Be Vietnam Pro", serif;
     color: #c7b585;
-    font-weight: bold;
+    font-weight: 500;
     position: relative;
     padding-top: 15px;
     /* border: 2px solid red; */
@@ -1139,7 +1139,7 @@ main p {
     border-radius: 40px;
 }
 .edu-course1 h4{
-    font-size: 1.2vw;
+    font-size: 1.2em;
     text-align: left;
     font-family: "Be Vietnam Pro", serif;
     font-weight: 500;
@@ -1153,7 +1153,7 @@ main p {
     border-radius: 40px;
 }
 .edu-course2 h4{
-    font-size: 1.2vw;
+    font-size: 1.2em;
     text-align: left;
     font-family: "Be Vietnam Pro", serif;
     font-weight: 500;
@@ -1242,7 +1242,7 @@ main p {
         border-radius: 40px;
     }
     .edu-course1 h4{
-        font-size: 1.2vw;
+        font-size: 1.2em;
         text-align: left;
         font-family: "Be Vietnam Pro", serif;
         font-weight: 500;
@@ -1252,7 +1252,7 @@ main p {
     }
     
     .edu-course2{
-        padding: 1vw 1.5vw;
+        padding: 1vw 1.5em;
         width: fit-content;
         margin-bottom: 10px;
         border-radius: 40px;
@@ -1491,6 +1491,7 @@ main p {
     color: #f1eee8;
     font-size: 26px;
     margin-bottom: 20px;
+    font-family: "Be Vietnam Pro", serif;
 }
 .skills-grid {
     display: grid;

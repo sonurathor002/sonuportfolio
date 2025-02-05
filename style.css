@@ -24,25 +24,25 @@ body{
 
 .image-container {
     position: relative;
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
-.background-image{
+/* Background Image */
+.background-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: brightness(80%);
-    filter: grayscale(80%);
+    object-fit: cover; /* Ensures the image covers the entire container */
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
-    opacity: 30%;
+    opacity: 0.3; /* Adjusted for better visibility on mobile screens */
+    filter: brightness(80%) grayscale(80%);
 }
 
 /* Stars Layer */
@@ -54,6 +54,44 @@ body{
     height: 100vh;
     z-index: 2;
 }
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .image-container {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .background-image {
+        object-fit: contain; /* Prevents cropping issues */
+        filter: brightness(85%) grayscale(50%); /* Adjusts the effect for small screens */
+        opacity: 0.5;
+    }
+
+    #starsCanvas {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .background-image {
+        object-fit: cover;
+        filter: brightness(90%) grayscale(30%);
+        opacity: 0.6;
+    }
+
+    #starsCanvas {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
 
 
 .navbar {
@@ -1223,7 +1261,7 @@ main p {
 
     #left-bottom {
         text-align: center;
-        width: 100%;
+        width: fit-content;
         grid-row: 3/4;
         padding: 5px;
     }
@@ -1268,7 +1306,7 @@ main p {
     #right {
         grid-column: 1;
         grid-row: auto;
-        width: 100%;
+        width: fit-content;
         padding: 10px;
     }
 

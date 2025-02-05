@@ -46,7 +46,7 @@ body{
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 20%;
+    opacity: 25%;
 }
 
 /* Stars Layer */
@@ -1587,7 +1587,6 @@ main p {
         width: fit-content;
         /* height: fit-content; */
         transform: translate(-50%, 2%);
-        -webkit-transform: translate(-50%, 2%);
     }
 
     .skills-sidebar {

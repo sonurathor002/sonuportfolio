@@ -14,52 +14,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+
 const canvas = document.getElementById("starsCanvas");
 const ctx = canvas.getContext("2d");
 
-// Function to set canvas size and regenerate stars
-function setCanvasSize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    createStars(); // Recreate stars after resizing
-}
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 const stars = [];
-let numStars = Math.floor((canvas.width * canvas.height) / 15000); // Adjust based on screen size
+const numStars = 60;
 
-// Function to create stars dynamically
-function createStars() {
-    stars.length = 0; // Clear previous stars
-    numStars = Math.floor((canvas.width * canvas.height) / 15000); // Adjust density
-
-    for (let i = 0; i < numStars; i++) {
-        stars.push({
-            x: Math.random() * canvas.width,  // Spread across full width
-            y: Math.random() * canvas.height, // Spread across full height
-            radius: Math.random() * 1.5 + 1,  // Slightly bigger stars for visibility
-            speedX: Math.random() * 0.3 - 0.15, // Move left/right
-            speedY: Math.random() * 0.3 - 0.15, // Move up/down
-            opacity: Math.random() * 0.6 + 0.4 // More visibility variation
-        });
-    }
+// Create stars with positions starting from the middle top and spanning the full width
+for (let i = 0; i < numStars; i++) {
+    stars.push({
+        x: Math.random() * canvas.width, // Random x position across the full width
+        y: 0 + Math.random() * 50, // Start from the top with some variation
+        radius: Math.random() * 1 + 1,
+        speedX: Math.random() * 0.3 - 0.10, // Move left/right
+        speedY: Math.random() * 0.3 - 0.10, // Move up/down
+        opacity: Math.random()
+    });
 }
 
-// Animate stars with smoother movement
+// Animate stars
 function animateStars() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     stars.forEach(star => {
+        // Move stars
         star.x += star.speedX;
         star.y += star.speedY;
 
-        // Wrap around edges smoothly
+        // Wrap around edges
         if (star.x < 0) star.x = canvas.width;
         if (star.x > canvas.width) star.x = 0;
         if (star.y < 0) star.y = canvas.height;
         if (star.y > canvas.height) star.y = 0;
 
         // Twinkling effect
-        star.opacity = Math.random() * 0.3 + 0.5;
+        star.opacity = Math.random() * 0.4 + 0.4;
 
         // Draw stars
         ctx.beginPath();
@@ -71,12 +64,14 @@ function animateStars() {
     requestAnimationFrame(animateStars);
 }
 
-// Resize canvas when window resizes and recreate stars
-window.addEventListener("resize", setCanvasSize);
-
-// Initial setup
-setCanvasSize();
+// Start animation
 animateStars();
+
+// Resize canvas when window resizes
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
 
 
 

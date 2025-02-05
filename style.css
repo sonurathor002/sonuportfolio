@@ -28,6 +28,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     
 }
 
@@ -41,7 +42,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: -1;
     opacity: 20%;
 }
 
@@ -1765,7 +1766,7 @@ main p {
 
 .contact-right img{
     width: 450px;
-    filter: brightness(150%);
+    filter: brightness(200%);
 }
 
 /* Small Screens: 425px and below */

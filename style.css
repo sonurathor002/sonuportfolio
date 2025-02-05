@@ -1948,15 +1948,16 @@ main p {
 
 .footer p{
     padding: 20px 0;
-    font-size: 1.2vw;
+    font-size: 1.2em;
     color: #fff;
     font-family: Be Vietnam Pro;
     font-weight: 200;
+    text-decoration: none;
 }
 
 .footer p:nth-child(3){
     padding: 0px;
-    font-size: 1.2vw;
+    font-size: 1.2em;
     color: #fff;
     font-family: Be Vietnam Pro;
     font-weight: 200;

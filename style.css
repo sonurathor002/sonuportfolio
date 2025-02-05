@@ -1600,10 +1600,10 @@ main p {
     .skill-box i {
         font-size: 7vw;
     }
-    .skill-box:hover::after{
+    /* .skill-box:hover::after{
         transform: translate(-50%,-50%) scale(0.4);
         
-    }
+    } */
 }
 
 @media (min-width: 426px) and (max-width: 768px) {

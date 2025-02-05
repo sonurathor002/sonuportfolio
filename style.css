@@ -1587,6 +1587,7 @@ main p {
         width: fit-content;
         /* height: fit-content; */
         transform: translate(-50%, 2%);
+        -webkit-transform: translate(-50%, 2%);
     }
 
     .skills-sidebar {

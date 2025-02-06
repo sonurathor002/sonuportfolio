@@ -1180,7 +1180,7 @@ main p {
 }
 
 #right .box{
-    background-image: url(sonuphoto.jpeg);
+    background-image: url(./sonuphoto.jpeg);
     filter: grayscale(1);
     -webkit-background-size:cover;
     background-size: cover;

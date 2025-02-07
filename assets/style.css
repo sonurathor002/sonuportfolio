@@ -74,6 +74,7 @@ body{
     z-index: 1000;
     /* border: 1px solid red; */
     margin-top: 5px;
+    padding: 0 1em;
 }
 
 .nav-list {
@@ -94,8 +95,8 @@ body{
 .nav-list li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    padding: 4px 12px;
+    font-size: 1.1em;
+    padding: 4px 10px;
     font-family: nb;
     transition: background-color 0.3s ease, color 0.1s ease, border-radius 0.1s ease;
 }
@@ -128,7 +129,7 @@ body{
         border-radius: 50%;
     }
     to {
-        width: 24%;
+        width: 20em;
         height: 40px;
         border-radius: 20px;
     }
@@ -153,7 +154,7 @@ body{
             border-radius: 50%;
         }
         to {
-            width: 70%;
+            width: fit-content;
             height: 40px;
             border-radius: 20px;
         }
@@ -165,7 +166,8 @@ body{
         margin: 0 3px;
     }
     .nav-list li a{
-        padding: 4px 8px;
+        padding: 2px 4px;
+        font-size: 3.2vw;
     }
 
 } 
@@ -178,7 +180,7 @@ body{
             border-radius: 50%;
         }
         to {
-            width: 65%;
+            width:fit-content;
             height: 40px;
             border-radius: 20px;
         }
@@ -190,12 +192,13 @@ body{
         margin: 0 1vw;
     }
     .nav-list li a{
-        padding: 1vw 1vw;
+        padding: 2px 4px;
+        font-size: 1em;
     }
 }
 
 /* media query for tablet */
-@media (min-width: 768px) and (max-width: 1300px) {
+@media (min-width: 769px) and (max-width: 1300px) {
     @keyframes expandNav {
         from {
             width: 50px;
@@ -203,7 +206,7 @@ body{
             border-radius: 50%;
         }
         to {
-            width: 40%;
+            width: fit-content;
             height: 40px;
             border-radius: 20px;
         }
@@ -215,7 +218,8 @@ body{
         margin: 0 1vw;
     }
     .nav-list li a{
-        padding: 4px 1vw;
+        padding: 2px 4px;
+        font-size: 1em;
     }
 }
 
@@ -259,7 +263,7 @@ body{
 }
 
 /* Media Query for screens up to 425px (small screens like mobile) */
-@media screen and (max-width: 425px) {
+@media  (max-width: 425px) {
     .main-name h1 {
         font-size: 3em; /* Reduce font size for better fit */
         top: 50%; /* Keep it vertically centered */
@@ -269,7 +273,7 @@ body{
 }
 
 /* Media Query for screens 426px to 768px (tablets and small laptops) */
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
     .main-name h1 {
         font-size: 4.5em; /* Adjust font size for medium screens */
         top: 50%;
@@ -279,7 +283,7 @@ body{
 }
 
 /* Media Query for screens 768px to 1300px (larger tablets and desktops) */
-@media screen and (min-width: 769px) and (max-width: 1300px) {
+@media (min-width: 769px) and (max-width: 1300px) {
     .main-name h1 {
         font-size: 5.5em; /* Slightly smaller than default for large screens */
         top: 50%;
@@ -287,7 +291,7 @@ body{
         transform: translate(-50%, -50%);
     }
 }
-@media screen and (max-width: 430px) {
+@media (max-width: 430px) {
     .main-name h1 {
         font-size: 3.5em; /* Adjust font size for better fit */
         top: 50%;
@@ -301,9 +305,8 @@ section p{
     color: #FBF5E5;
     position:absolute;
     top: 55%;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family: "Italiana", serif;
-    font-size: 20px;
+    font-size: 1.2em;
     /* border: 1px solid red; */
     width: 100%;
     text-align: center;
@@ -319,7 +322,7 @@ main p {
     color: #c7b585;
     font-weight: 500;
     position: relative;
-    padding-top: 15px;
+    padding-top: 0.5em;
     /* border: 1px solid red; */
 }
 
@@ -1019,13 +1022,13 @@ main p {
     color: #c7b585;
     font-weight: 500;
     position: relative;
-    padding-top: 15px;
+    padding-top: 0.5em;
     /* border: 2px solid red; */
 }
 
 .about-content{
     height: fit-content;
-    width: 100%;
+    width: fit-content;
     /* background-color: rgba(255, 0, 0, 0.362); */
     display: grid;
     grid-template-columns: 1fr 1fr;

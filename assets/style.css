@@ -154,7 +154,7 @@ body{
             border-radius: 50%;
         }
         to {
-            width: fit-content;
+            width: 13em;
             height: 40px;
             border-radius: 20px;
         }
@@ -180,7 +180,7 @@ body{
             border-radius: 50%;
         }
         to {
-            width:fit-content;
+            width: 16em;
             height: 40px;
             border-radius: 20px;
         }
@@ -206,7 +206,7 @@ body{
             border-radius: 50%;
         }
         to {
-            width: fit-content;
+            width: 18em;
             height: 40px;
             border-radius: 20px;
         }

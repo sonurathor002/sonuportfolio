@@ -335,6 +335,12 @@ main p {
     margin: 5vw 9vw;
     /* left: 15%; */
 }
+@media  (max-width: 768px) {
+    .project-card1 {
+        width: fit-content;
+        margin: 5vw 9vw;
+    } 
+}
 
 .project-card1 img{
     height: 70%;
@@ -507,6 +513,12 @@ main p {
     width: 70%;
     margin: 10vw 20vw;
 }
+@media  (max-width: 768px) {
+    .project-card2 {
+        width: fit-content;
+        margin: 5vw 9vw;
+    } 
+}
 
 .project-card2 img{
     height: 70%;
@@ -678,6 +690,13 @@ main p {
     margin: 10vw 9vw;
 }
 
+@media  (max-width: 768px) {
+    .project-card3 {
+        width: fit-content;
+        margin: 5vw 9vw;
+    } 
+}
+
 .project-card3 img{
     height: 70%;
     width: 100%;
@@ -847,6 +866,13 @@ main p {
     position: relative; 
     width: 70%;
     margin: 2vw 20vw;
+}
+
+@media  (max-width: 768px) {
+    .project-card4 {
+        width: fit-content;
+        margin: 5vw 9vw;
+    } 
 }
 
 .project-card4 img{
